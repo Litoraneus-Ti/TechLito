@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Formulario_Project</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <h2>Login</h2>
+        <!-- <h4>Digite seu CPF ea senha de Administrador para logar.</h4> -->
+        <form action="">
+            <div class="input-field">
+                <label id="labelCpf" for="cpf">Digite seu CPF</label>
+                <br>
+                <input name="CPF" type="text" id="campo_cpf" placeholder="" required>
+
+                <div class="underline"></div>
+            </div>
+            <br>
+            <div class="input-field ">
+                <input type="password" name="password" id="password" placeholder="Senha Administrador">
+                <div class="underline"></div>
+            </div>
+
+            <input type="submit" value="Entrar" onclick="validar()">
+        </form>
+
+        <div id='erro'></div>
+        <div id='acerto'></div>
+    </main>
+
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
