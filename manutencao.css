@@ -101,13 +101,12 @@ body {
 
     #msg textarea {
         margin-top: 25px;
-        margin-left: -25px;
+        margin-left: -35px;
         max-width: 230px;
     }
     
     select {
        margin-left: 4px;
-
     }
 
     .justify-center{
