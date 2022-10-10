@@ -16,3 +16,34 @@ nome.addEventListener('keyup', () => {
         validNome = true
     }
 })
+
+
+let Componente = document.querySelector('#Componente')
+let labelComponente = document.querySelector('#labelComponente')
+let validComponente = false;
+
+Componente.addEventListener('keyup', () => {
+    if (Componente.value.length <= 7) {
+        labelComponente.setAttribute('style', 'color: red')
+        labelComponente.innerHTML = 'Componete invalido! Exemplo: TRAFM060'
+        Componente.setAttribute('style', 'border-color: red')
+        validComponente = false
+    }
+      
+        
+        
+        else {
+            labelComponente.setAttribute('style', 'color: green')
+            labelComponente.innerHTML = 'Componente Valido!'
+            Componente.setAttribute('style', 'border-color: green')
+            validComponente = true
+        }
+    })
+
+function soliCitar() {
+
+
+    
+}
+
+

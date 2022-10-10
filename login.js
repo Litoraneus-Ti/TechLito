@@ -54,13 +54,18 @@ value_cpf.addEventListener("blur", function (e) {
 
 })
 
+let senha = document.querySelector('#senha')
+let labelSenha = document.querySelector('#labelSenha')
+let validSenha = false;
+let value_senha = document.querySelector('#senha');
+
+
+
+
 function validar() {
-    if (validCpf  && validSenha ) {
+    if (senha != litoraneus &&) {
 
-        setTimeout(() => {
-            window.location.href = 'https://cdpn.io/thicode/debug/ZELzYxV/dXAqBaRyvwJk'
-        }, 3000)
-
+      
     }
    
 }
