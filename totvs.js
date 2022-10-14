@@ -29,21 +29,39 @@ Componente.addEventListener('keyup', () => {
         Componente.setAttribute('style', 'border-color: red')
         validComponente = false
     }
-      
-        
-        
-        else {
-            labelComponente.setAttribute('style', 'color: green')
-            labelComponente.innerHTML = 'Componente Valido!'
-            Componente.setAttribute('style', 'border-color: green')
-            validComponente = true
-        }
-    })
+
+
+
+    else {
+        labelComponente.setAttribute('style', 'color: green')
+        labelComponente.innerHTML = 'Componente Valido!'
+        Componente.setAttribute('style', 'border-color: green')
+        validComponente = true
+    }
+})
+
+const addloaDing = () => {
+
+    const button = document.querySelector('button');
+    button.innerHTML = '<img src="loading.png" class="loading">';
+
+}
+
+let COD = document.getElementById('COD');
+
 
 function soliCitar() {
-
-
+    if (validComponente == true && validNome == true && COD.value != '')
+    { 
     
+    addloaDing();
+    alert('Solicitação Enviada!')
+    
+    }
+
+    else {
+        alert('preencha todos os campos corretamente!');
+    }
 }
 
 

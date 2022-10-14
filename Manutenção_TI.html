@@ -140,60 +140,61 @@
     <div class='container'>
         <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post">
             <div class='espacamento'>
-                <div id='erro'></div>
-                <div id='acerto'></div>
-                <br>
 
-                <div class="flutuacao">
-                    <input name="Usuarios" type="text" id="nome" placeholder=" " required>
-                    <label id="labelNome" for="nome">Digite Nome do Solicitante</label>
-                </div>
-                <label id="labelNome" for="setor">Qual Setor: </label>
-                <br><br>
-                <select name="Setor">
-                    <label for='styledSelect1' class='custom-select'></label>
-                    <option value="DEPARTAMENTO PESSOAL">Departamento Pessoal</option>
-                    <option value="BOA VIAGEM">Boa Viagem</option>
-                    <option value="Fiscal Acene">Fiscal Acene</option>
-                    <option value="PCP">PCP</option>
-                    <option value="COSTURA" selected>COSTURA</option>
-                    <option value="ACABAMENTO" selected>ACABAMENTO</option>
-                    <option value="ESTOQUE" selected>Estoque</option>
-                    <option value="EXPEDIÇÃO">Expedição</option>
-                    <option value="CORTE">Corte</option>
-                    <option value="GRÁFICO">Gráfico</option>
-                    <option value="LOJA OUTLET">LOJA OUTLET</option>
-                    <option value="LOJA MIDWAY">LOJA MIDWAY</option>
-                    <option value="LOJA PARALELA">LOJA PARALELA</option>
-                    <option value="COMERCIAL">Comercial</option>
-                    <option value="LOJA SHOPPING RIO MAR">Shopping Rio Mar</option>
-                    <option value="LOJA SHOPPING RECIFE">SHOPPING RECIFE</option>
-                    <option value="LOJA SHOOPING GUARARAPES">SHOPPING GUARARAPES</option>
-                    <option value="LOJA SHOPPING SALVADOR">Shopping Salvador</option>
-                </select>
-                <input type="hidden" name="Data" value="x-sheetmonkey-current-date-time" />
-                <br>
-                <label id="labelUrgencia" for="grau">Grau de Urgência</label>
-                <div class="urgencia">
-                    <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
-                    <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada" checked> Urgencia Moderada<br>
-                    <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"> Pouca Urgencia<br>
-                </div>
-
-
-                <div id="msg">
-                    <label id="descricao" for="msg"></label>
-                    <textarea placeholder="Relate o Problema" name="Observação"
-                        id="textarea"></textarea>
-                </div>
-
-                <div class='justify-center'>
-                    <input type="submit" value="Enviar" onclick="receber()">
+                <!-- <img src="computador-de-mesa.jpg" class="img_res" id="imagemreserva"> -->
+                <div class="mensagem">
+                    <div id='erro'></div>
+                    <div id='acerto'></div>
                 </div>
                 <br>
+                <div class="Main">
+                    <div class="flutuacao">
+                        <input name="Usuarios" type="text" id="nome" placeholder=" " required>
+                        <label id="labelNome" for="nome">Digite Nome do Solicitante</label>
+                    </div>
+                    <label id="labelNome" for="setor">Qual Setor: </label>
+                    <br><br>
+                    <select name="Setor">
+                        <label for='styledSelect1' class='custom-select'></label>
+                        <option value="DEPARTAMENTO PESSOAL">Departamento Pessoal</option>
+                        <option value="BOA VIAGEM">Boa Viagem</option>
+                        <option value="Fiscal Acene">Fiscal Acene</option>
+                        <option value="PCP">PCP</option>
+                        <option value="COSTURA / ACABAMENTO" selected>COSTURA / ACABAMENTO</option>
+                        <option value="ESTOQUE" selected>Estoque</option>
+                        <option value="EXPEDIÇÃO">Expedição</option>
+                        <option value="CORTE">Corte</option>
+                        <option value="GRÁFICO">Gráfico</option>
+                        <option value="LOJA OUTLET">LOJA OUTLET</option>
+                        <option value="LOJA MIDWAY">LOJA MIDWAY</option>
+                        <option value="LOJA PARALELA">LOJA PARALELA</option>
+                        <option value="COMERCIAL">Comercial</option>
+                        <option value="LOJA SHOPPING RIO MAR">Shopping Rio Mar</option>
+                        <option value="LOJA SHOPPING RECIFE">SHOPPING RECIFE</option>
+                        <option value="LOJA SHOOPING GUARARAPES">SHOPPING GUARARAPES</option>
+                        <option value="LOJA SHOPPING SALVADOR">Shopping Salvador</option>
+                    </select>
+                    <input type="hidden" name="Data" value="x-sheetmonkey-current-date-time" />
+                    <br>
+                    <label id="labelUrgencia" for="grau">Grau de Urgência</label>
+                    <div class="urgencia">
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada" checked> Urgencia
+                        Moderada<br>
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"> Pouca Urgencia<br>
+                    </div>
 
 
+                    <div id="msg">
+                        <label id="descricao" for="msg"></label>
+                        <textarea placeholder="Relate o Problema" name="Observação" id="textarea"></textarea>
+                    </div>
 
+                    <div class='justify-center'>
+                        <input type="submit" value="Enviar" onclick="receber()">
+                    </div>
+                    <br>
+                </div>
         </form>
 
     </div>
@@ -250,10 +251,12 @@
                 )
 
                 localStorage.setItem('listaUser', JSON.stringify(listaUser))
-
-
+                // let imgBack = document.getElementById('imagemreserva');
+                // imgBack.setAttribute('style', 'diplay:block');
+                let Main = document.querySelector('.Main');
+                Main.setAttribute('style', 'display:none')
                 msgSuccess.setAttribute('style', 'display: block')
-                msgSuccess.innerHTML = '<strong>Cadastrada com Sucesso...</strong>'
+                msgSuccess.innerHTML = '<strong> CADASTRANDO ORDEM DE SERVIÇO....</strong>'
                 msgError.setAttribute('style', 'display: none')
                 msgError.innerHTML = ''
 

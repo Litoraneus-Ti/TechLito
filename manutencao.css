@@ -18,6 +18,7 @@ body {
     color: #c5c5c5;
 }
 
+
 @media screen and (min-width: 700px) {
     form input {
         margin-top: 10px;
@@ -62,6 +63,7 @@ body {
     #msg textarea {
         min-width: 280px;
     }
+
     #msg {
         text-align: center;
     }
@@ -73,13 +75,14 @@ body {
     form input[type="submit"] {
 
         width: 80%;
-     
+
     }
+
     select {
         margin-left: 25px;
         width: 120px;
     }
-   
+
 }
 
 @media screen and (max-width: 385px) {
@@ -104,25 +107,26 @@ body {
         margin-left: -35px;
         max-width: 230px;
     }
-    
+
     select {
-       margin-left: 4px;
+        margin-left: 4px;
     }
 
-    .justify-center{
-       margin: auto;
-       margin-right: 25px;
+    .justify-center {
+        margin: auto;
+        margin-right: 25px;
     }
 
-   
+
 }
 
 @media screen and (max-width: 350px) {
     header h1 {
         font-size: 20px;
     }
+
     #msg textarea {
-       width: 250px;
+        width: 250px;
     }
 }
 
@@ -131,10 +135,11 @@ body {
     header h1 {
         font-size: 17px;
     }
+
     #msg textarea {
         width: 200px;
         margin-right: 10px;
-     }
+    }
 }
 
 
@@ -346,6 +351,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     display: none;
+    margin-top: 150px;
 }
 
 #acerto {
@@ -355,7 +361,21 @@ body {
     padding: 10px;
     border-radius: 5px;
     display: none;
+    margin-top: 150px;
 }
+.espacamento img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* .img_res{
+    display: NONE;
+    margin: auto;
+} */
+
+/* .Main {
+    display: none;
+} */
 
 .container .partefim a {
     color: #c5c5c5;

@@ -227,7 +227,7 @@ body {
 
 
   button {
-    margin-top:5px;
+    margin-top: 5px;
   }
 }
 
@@ -421,5 +421,22 @@ body {
 
   }
 
+
+}
+
+
+.loading {
+  width: 8%;
+  animation: spin 0.7s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 
 }
