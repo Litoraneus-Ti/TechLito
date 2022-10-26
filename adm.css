@@ -1,0 +1,43 @@
+body {
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    color: antiquewhite;
+}
+
+
+.BANCO{
+display: flex;
+width: 70%;
+height: 300px;
+margin: auto;
+margin-top: 70px;
+
+}
+
+.bancosdeDados{
+
+margin: auto;
+}
+
+.main img {
+    width: 100%;
+    
+}
+
+p{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+}
+.bancosdeDados:hover {
+    animation: animationProduto 1.2s;
+    cursor: pointer;
+}
+@keyframes animationProduto {
+    30% {
+        -webkit-transform: translateY((-15px));
+        transform: translateY(-15px);
+    }
+}
+
+
