@@ -175,6 +175,34 @@ body {
     color: #c5c5c5;
 }
 
+/* .main option:hover{
+    background-color: #ff0044;
+    color: #ff0044;
+} */
+
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    /* display: inline-block; */
+    width: 15px;
+    height: 15px;
+   
+    /* background-color only for content */
+    /* background-clip: content-box; */
+    /* border: 2px solid #bbbbbb; */
+    background-color: #e7e6e7;
+    border-radius: 50%;
+  }
+  
+  /* appearance for checked radiobutton */
+  input[type="radio"]:checked {
+    background-color:#32c06f;
+  }
+
+
 #header a:hover {
     text-decoration: 2px underline #0e9549;
     transition: 0.4s;
@@ -208,7 +236,7 @@ body {
 
 .btn-header button:hover {
     cursor: pointer;
-    border: 2px solid #ff0044;
+    border: 2px solid #070707;
     transition: 0.4s;
 }
 
