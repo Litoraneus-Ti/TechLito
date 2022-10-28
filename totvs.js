@@ -3,6 +3,16 @@ let labelNome = document.querySelector('#labelNome')
 let validNome = false;
 
 
+today = new Date();
+h = today.getHours();
+m = today.getMinutes();
+s = today.getSeconds();
+const myDate = new Date().toLocaleDateString();
+console.log(myDate);
+const myInput = document.querySelector("#dataToday");
+myInput.value = myDate +"  "+ h + ":" + m ;
+
+
 nome.addEventListener('keyup', () => {
     if (nome.value.length <= 4) {
         labelNome.setAttribute('style', 'color: red')
@@ -16,6 +26,8 @@ nome.addEventListener('keyup', () => {
         validNome = true
     }
 })
+
+
 
 
 let Componente = document.querySelector('#Componente')

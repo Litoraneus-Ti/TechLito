@@ -63,6 +63,11 @@
 
     }
 
+    /* 
+    #teste{
+        display: none;
+    } */
+
     /* &:after {
         position: absolute;
         right: 0;
@@ -107,7 +112,7 @@
         background: linear-gradient(to right, #0e9549, #00751f);
     }
 
-    #datadeHoje {
+    #dataToday {
         display: none;
     }
 
@@ -174,11 +179,11 @@
                         <option value="LOJA SHOOPING GUARARAPES" selected>SHOPPING GUARARAPES</option>
                         <option value="LOJA SHOPPING SALVADOR">Shopping Salvador</option>
                     </select>
-                    <input type="hidden" name="Data" value="x-sheetmonkey-current-date-time" />
+                    <input type="text" name="Data" id="dataToday" />
                     <br>
                     <label id="labelUrgencia" for="grau">Grau de Urgência</label>
                     <div class="urgencia">
-                        
+
                         <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
                         <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada" checked> Urgencia
                         Moderada<br>
@@ -222,6 +227,19 @@
                 validNome = true
             }
         })
+
+        today = new Date();
+        h = today.getHours();
+        m = today.getMinutes();
+        s = today.getSeconds();
+        const myDate = new Date().toLocaleDateString();
+        console.log(myDate);
+        const myInput = document.querySelector("#dataToday");
+        myInput.value = myDate +"  "+ h + ":" + m ;
+
+
+
+        // saída: Hoje é dia 15/7 de 2020. Agora são 14:59h.
 
         // const enviAndo = (event) => {
         //     event.preventDefault();
