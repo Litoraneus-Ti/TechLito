@@ -92,7 +92,7 @@ function receber() {
         msgSuccess.innerHTML = '<strong>AGUARDE...<BR>CADASTRANDO SUA ORDEM DE SERVIÇO....</strong>'
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
-        alert(`${nome.value} você receberá uma mensagem no email ${email.value}, caso não chegue repita o procedimento de cadastro, obrigado!`)
+        // alert(`${nome.value} você receberá uma mensagem no email ${email.value}, caso não chegue repita o procedimento de cadastro, obrigado!`)
         // setTimeout(() => {
         //     window.location.href = ''
         // }, 5000)
