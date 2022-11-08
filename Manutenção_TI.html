@@ -10,127 +10,7 @@
 </head>
 
 <style>
-    #msg {
-        margin-top: 15px;
-    }
-
-    #msg textarea {
-        min-width: 350px;
-        min-height: 200px;
-        max-width: 350px;
-        max-height: 200px;
-        padding: 10px;
-        background-color: transparent;
-        border: 1px solid #c5c5c5;
-        color: #c5c5c5;
-        font-size: 18px;
-        border-radius: 5px;
-        resize: none;
-        outline: none;
-    }
-
-    #msg textarea:focus {
-        border-color: #0e9549;
-        transition: .4s;
-    }
-
-
-    /* .custom-select {
-        position: relative;
-        display: block;
-        max-width: 400px;
-        min-width: 180px;
-        margin: 0;
-        border: 1px solid #1c754b;
-        background-color: #16013E;
-        z-index: 10;
-    } */
-
-    select {
-        border: none;
-        outline: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 5px;
-        margin: 0;
-        display: block;
-        width: 85%;
-        padding: 7px 3px 07px 07px;
-        font-size: 17px;
-        color: #0a1b0d;
-        background-color: azure;
-
-    }
-
-    /* 
-    #teste{
-        display: none;
-    } */
-
-    /* &:after {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        line-height: 38px;
-        content: '\2228';
-        text-align: center;
-        color: #714BB9;
-        font-size: 24px;
-        border-left: 1px solid #3C1C78;
-        z-index: -1;
-    } */
-
-
-
-    option {
-        background-color: #64b18c;
-    }
-
-    header h1 {
-        font-size: 35px;
-    }
-
-    form input[type="submit"] {
-        padding: 10px;
-        width: 100%;
-        background: linear-gradient(to left, #0e9549, #00751f);
-        cursor: pointer;
-        color: #c5c5c5;
-        font-size: 15px;
-        border: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        margin-bottom: 10px;
-    }
-
-    form input[type="submit"]:hover {
-        letter-spacing: 0.5px;
-        background: linear-gradient(to right, #0e9549, #00751f);
-    }
-
-    #dataToday {
-        display: none;
-    }
-
-    /* body {
-        background-image: url(manutenção.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .container {
-        background-color: #fafafa;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        width: 400px;
-        max-width: 100%;
-        overflow: hidden;
-        
-    } */
+  
 </style>
 
 <body>
@@ -143,7 +23,8 @@
 
 
     <div class='container'>
-        <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post">
+        <form  id="form-1" action="https://formsubmit.co/litoraneus.sti@litoraneus.com" method="POST">
+        <!-- <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post"> -->
             <div class='espacamento'>
 
                 <!-- <img src="computador-de-mesa.jpg" class="img_res" id="imagemreserva"> -->
@@ -157,12 +38,17 @@
                         <input name="Usuarios" type="text" id="nome" placeholder=" " required>
                         <label id="labelNome" for="nome">Digite Nome do Solicitante</label>
                     </div>
+                    <div class="flutuacao">
+                        <input name="email" type="email" id="email" placeholder=" " required>
+                        <label id="labelEmail" for="email">Digite um email Valido!</label>
+                    </div>
+
                     <label id="labelNome" for="setor">Qual Setor: </label>
                     <br><br>
                     <select name="Setor" required>
                         <label for='styledSelect1' class='custom-select'></label>
                         <option value="BOA VIAGEM">Boa Viagem</option>
-                        <option value="DEPARTAMENTO PESSOAL">Departamento Pessoal</option>
+                        <option value="DEPARTAMENTO PESSOAL" selected>Departamento Pessoal</option>
                         <option value="Fiscal Acene">Fiscal Acene</option>
                         <option value="PCP / LOJA VIRTUAL">PCP / LOJA VIRTUAL</option>
                         <option value="COSTURA / ACABAMENTO">COSTURA / ACABAMENTO</option>
@@ -176,7 +62,7 @@
                         <option value="Mag Shopping">Mag Shopping</option>
                         <option value="LOJA SHOPPING RIO MAR">Shopping Rio Mar</option>
                         <option value="LOJA SHOPPING RECIFE">SHOPPING RECIFE</option>
-                        <option value="LOJA SHOOPING GUARARAPES" selected>SHOPPING GUARARAPES</option>
+                        <option value="LOJA SHOOPING GUARARAPES">SHOPPING GUARARAPES</option>
                         <option value="LOJA SHOPPING SALVADOR">Shopping Salvador</option>
                     </select>
                     <input type="text" name="Data" id="dataToday" />
@@ -185,115 +71,33 @@
                     <div class="urgencia">
 
                         <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada" checked> Urgencia
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada"> Urgencia
                         Moderada<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"> Pouca Urgencia<br>
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"checked> Pouca Urgencia<br>
                     </div>
 
 
                     <div id="msg">
                         <label id="descricao" for="msg"></label>
                         <textarea placeholder="Relate o Problema" name="Observação" id="textarea"></textarea>
-                    </div>
-
+                    </div>                    
                     <div class='justify-center'>
                         <input type="submit" value="Enviar" onclick="receber()">
                     </div>
                     <br>
                 </div>
+
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                <input type="hidden" name="_subject" value="CHAMADOS LITORANEUS T.I ">
+                <input type="email" name="_cc" value="Assueromota@hotmail.com">
+                <input type="hidden" name="_captcha" value="false">
         </form>
 
     </div>
 
 
-    <script>
-        let nome = document.querySelector('#nome')
-        let labelNome = document.querySelector('#labelNome')
-        let validNome = false;
-
-        let msgError = document.querySelector('#erro');
-        let msgSuccess = document.querySelector('#acerto');
-
-        nome.addEventListener('keyup', () => {
-            if (nome.value.length <= 4) {
-                labelNome.setAttribute('style', 'color: red')
-                labelNome.innerHTML = 'Minimo de 5 caracteres'
-                nome.setAttribute('style', 'border-color: red')
-                validNome = false
-            } else {
-                labelNome.setAttribute('style', 'color: green')
-                labelNome.innerHTML = 'Nome Valido!'
-                nome.setAttribute('style', 'border-color: green')
-                validNome = true
-            }
-        })
-
-        today = new Date();
-        h = today.getHours();
-        m = today.getMinutes();
-        s = today.getSeconds();
-        const myDate = new Date().toLocaleDateString();
-        console.log(myDate);
-        const myInput = document.querySelector("#dataToday");
-        myInput.value = myDate +"  "+ h + ":" + m ;
-
-
-
-        // saída: Hoje é dia 15/7 de 2020. Agora são 14:59h.
-
-        // const enviAndo = (event) => {
-        //     event.preventDefault();
-        //     const nome = document.querySelector('input[nome=nome]')
-        //     fetch('https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT', {
-        //         method: 'post', headers: {
-        //             'accept': 'application / JSON',
-        //             'Content-Type': 'application / JSON',
-        //         },
-        //    body: JSON.stringify({ nome })
-        //     });
-        //     document.querySelector('form').addEventListener('submit', enviAndo);
-
-
-
-
-        function receber() {
-
-
-
-            if (validNome == true) {
-                let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-
-                listaUser.push(
-                    {
-                        nomeCad: nome.value
-                    }
-                )
-
-                localStorage.setItem('listaUser', JSON.stringify(listaUser))
-                // let imgBack = document.getElementById('imagemreserva');
-                // imgBack.setAttribute('style', 'diplay:block');
-                let Main = document.querySelector('.Main');
-                Main.setAttribute('style', 'display:none')
-                msgSuccess.setAttribute('style', 'display: block')
-                msgSuccess.innerHTML = '<strong> CADASTRANDO ORDEM DE SERVIÇO....</strong>'
-                msgError.setAttribute('style', 'display: none')
-                msgError.innerHTML = ''
-
-                setTimeout(() => {
-                    window.location.href = ''
-                }, 5000)
-
-            } else {
-                msgError.setAttribute('style', 'display: block')
-                msgError.innerHTML = 'Preencha os campos corretamente';
-                msgSuccess.innerHTML = ''
-                msgSuccess.setAttribute('style', 'display: none')
-            }
-
-
-        }
-
-
+    <script src="manutenção.js">
     </script>
 
 </html>
