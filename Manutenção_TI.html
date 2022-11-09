@@ -10,7 +10,7 @@
 </head>
 
 <style>
-  
+
 </style>
 
 <body>
@@ -23,11 +23,11 @@
 
 
     <div class='container'>
-        <form  id="form-1" action="https://formsubmit.co/litoraneus.sti@litoraneus.com" method="POST">
-        <!-- <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post"> -->
+
+        <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post">
             <div class='espacamento'>
 
-                <!-- <img src="computador-de-mesa.jpg" class="img_res" id="imagemreserva"> -->
+
                 <div class="mensagem">
                     <div id='erro'></div>
                     <div id='acerto'></div>
@@ -45,7 +45,7 @@
 
                     <label id="labelNome" for="setor">Qual Setor: </label>
                     <br><br>
-                    <select name="Setor" required>
+                    <select name="Setor" required id="Setor">  
                         <label for='styledSelect1' class='custom-select'></label>
                         <option value="BOA VIAGEM">Boa Viagem</option>
                         <option value="DEPARTAMENTO PESSOAL" selected>Departamento Pessoal</option>
@@ -68,31 +68,45 @@
                     <input type="text" name="Data" id="dataToday" />
                     <br>
                     <label id="labelUrgencia" for="grau">Grau de Urgência</label>
-                    <div class="urgencia">
+                    <div class="urgencia" id="nivel_Urgencia">
 
                         <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada"> Urgencia
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada"checked> Urgencia
                         Moderada<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"checked> Pouca Urgencia<br>
+                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"> Pouca Urgencia<br>
                     </div>
 
 
                     <div id="msg">
                         <label id="descricao" for="msg"></label>
                         <textarea placeholder="Relate o Problema" name="Observação" id="textarea"></textarea>
-                    </div>                    
+                    </div>
+
+
+
+
+
+
                     <div class='justify-center'>
                         <input type="submit" value="Enviar" onclick="receber()">
                     </div>
                     <br>
                 </div>
-
-
-                <input type="hidden" name="_next" value="https://litoraneus-ti.github.io/TechLito/index.html">
-                <input type="hidden" name="_subject" value="CHAMADOS LITORANEUS T.I ">
-                <input type="hidden" name="_cc" value="litoraneus.app@gmail.com">
-                <input type="hidden" name="_captcha" value="false">
         </form>
+
+
+        <!-- <form action="https://formsubmit.co/assueromota@hotmail.com" method="POST" id="form_2">
+
+
+            <input type="hidden" name="_next" value="https://litoraneus-ti.github.io/TechLito/index.html">
+            <input type="hidden" name="_subject" value="CHAMADOS LITORANEUS T.I ">
+            <input type="hidden" name="_cc" value="" id="form-1">
+            <input type="hidden" name="_captcha" value="false">
+            <textarea placeholder="Relate o Problema" name="CHAMADOS T.I LITORANEUS" id="textarea_2"></textarea>
+            <input type="submit" name="enviarForm-2" value="Form-2">
+        </form> -->
+
+
 
     </div>
 
