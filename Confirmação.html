@@ -5,15 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAMADOS LITORANEUS</title>
+
+
+
+
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="manutencao.css">
+
+
+
 </head>
 
-<style>
+<body class="body">
 
-</style>
 
-<body>
+
 
     <header id="header">
         <a href="index.html"><img src="logo.png" alt="logo"></a>
@@ -22,20 +36,29 @@
     </header>
 
 
+
+
+
+
+
+
+
     <div class='container'>
-        <form action="https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT" method="post">
-
-            <!-- https://api.sheetmonkey.io/form/tUssevKdgxL29a85VojqLT -->
-
-            <div class='espacamento'>
 
 
+        <div class='espacamento'>
+            <section>
                 <div class="mensagem">
-                    <div id='erro'></div>
-                    <div id='acerto'></div>
+                    <div id='msgError'></div>
+                    <div id='msgSuccess'></div>
                 </div>
-                <br>
-                <div class="Main">
+            </section>
+            <br>
+            <div class="Main">
+                <form action="https://formsubmit.co/litoraneus.sti@litoraneus.com" method="POST" class="btn_Sub_form1">
+
+                    <!-- <textarea placeholder="Relate o Problema" name="CHAMADO T.I LITORANEUS"></textarea> -->
+
                     <div class="flutuacao">
                         <input name="Usuarios" type="text" id="nome" placeholder=" " required>
                         <label id="labelNome" for="nome">Digite Nome do Solicitante</label>
@@ -46,7 +69,7 @@
                     </div>
 
                     <label id="labelNome" for="setor">Qual Setor: </label>
-                    <br><br>
+                    <br>
                     <select name="Setor" required id="Setor">
                         <label for='styledSelect1' class='custom-select'></label>
                         <option value="BOA VIAGEM">Boa Viagem</option>
@@ -70,7 +93,9 @@
                     <input type="text" name="Data" id="dataToday" />
                     <br>
                     <label id="labelUrgencia" for="grau">Grau de Urgência: </label>
-                    <br><br>
+
+                    <br>
+
                     <select name="Nivel de Urgência" required id="Urgencia">
                         <label for='styledSelect1' class='custom-select'></label>
                         <option value="Muito Urgente">Muito Urgente</option>
@@ -79,41 +104,82 @@
                         <option value="Pouca Urgencia">Pouca Urgência</option>
                     </select>
 
-                    <!-- <div class="urgencia" id="nivel_Urgencia">
-
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Muito Urgente"> Muito Urgente<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Urgencia Moderada" checked> Urgencia
-                        Moderada<br>
-                        <INPUT TYPE="radio" NAME="Grau de Urgência" VALUE="Pouca Urgencia"> Pouca Urgencia<br>
-                    </div> -->
-                    <br>
-
                     <div id="msg">
                         <label id="descricao" for="msg"></label>
-                        <textarea placeholder="Relate o Problema" name="Observação" id="RelatoUser"></textarea>
+                        <textarea placeholder="Relate o Problema" name="Observação" id="RelatoUser"
+                            onclick="EnvioFormMail()"></textarea>
                     </div>
 
 
 
+                    <!-- 
+CAMPO PARA DESABILITAR ALGUMAS FUNCOES DO FORMSUBMIT E NÃO PERMITE CERTAS COISAS! -->
+                    <div class=New_Mailer>
 
+                        
+
+                    </div>
+
+                    <input type="hidden" name="_next" value="https://litoraneus-ti.github.io/TechLito/index.html">
+                    <input type="hidden" name="_subject" value="CHAMADOS T.I LITORANEUS">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
 
 
                     <div class='justify-center'>
-                        <input type="submit" value="Enviar" class="enviarForm-1" onclick="receber()" id="form1">
+                        <input type="submit" value="Enviar" class="enviarForm-1" id="form1">
                     </div>
-                    <br>
-                </div>
+
+
+
+                </form>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- COLOCAR NO JAVA -->
+        <!-- document.querySelector('.email_CC').value = email.value; -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </form>
 
 
+        <script src="ConfirmaçaoManutenção.js">
 
-
-
-
-    </div>
-
-
-    <script src="manutenção.js" defer>
-    </script>
+        </script>
+</body>
 
 </html>

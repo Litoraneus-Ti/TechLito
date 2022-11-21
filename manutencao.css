@@ -6,6 +6,17 @@
     box-sizing: border-box;
 }
 
+
+#msgSuccess{
+    
+    color: white;
+    font-size: 22px; 
+}
+
+
+
+
+
 body {
     background: linear-gradient(45deg, #313131, #383838);
     font-family: "Poppins", sans-serif;
@@ -16,6 +27,17 @@ body {
     gap: 15px;
     flex-wrap: wrap;
     color: #c5c5c5;
+
+}
+
+
+/* #textarea_2, .enviarForm-2{
+    display: none;
+}
+ */
+
+.btn_Sub_2 {
+    display: none;
 }
 
 
@@ -286,7 +308,7 @@ input[type="radio"]:checked {
     display: flex;
     justify-content: center;
     width: 89%;
-   
+
 }
 
 .img {
