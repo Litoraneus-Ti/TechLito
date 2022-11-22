@@ -112,6 +112,14 @@ var ele = document.getElementsByName('Urgência');
 var New_Mailer = document.querySelector('.New_Mailer');
 New_Mailer.innerHTML = ` <input type="hidden" name="_cc" value="${email.value}" class="EmailCopia"></input> `
 
+
+//INFORMATIVO DE PRAZO 
+
+var Prazo = document.querySelector('.Prazo');
+Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito Urgente: 2hrs, Urgência Moderada: 24 hrs e Pouca Urgência: 48 hrs."/>`; 
+
+
+
 // let email2 = document.querySelector('.EmailCopia');
 // email2.replace("assueromota@hotmail.com", email.value);
 // console.log(email2);
@@ -163,7 +171,11 @@ if (ConfirmaCao == true) {
     }, "600")
 
     setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>Enviando para o Email Castrado.......</strong>'
+        msgSuccess.innerHTML = '<strong>Enviando para o Email....</strong>'
+    }, "770")
+
+    setTimeout(() => {
+        msgSuccess.innerHTML = '<strong>Enviando para o Email.......</strong>'
     }, "900")
 
 
