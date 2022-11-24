@@ -110,7 +110,7 @@ var ele = document.getElementsByName('Urgência');
 // Inserção de email
 
 var New_Mailer = document.querySelector('.New_Mailer');
-New_Mailer.innerHTML = ` <input type="hidden" name="_cc" value="${email.value},joelma.litoraneus@outlook.com" class="EmailCopia"></input> `
+New_Mailer.innerHTML = ` <input type="hidden" name="_cc" value="${email.value}" class="EmailCopia"></input> `
 
 
 //INFORMATIVO DE PRAZO 
