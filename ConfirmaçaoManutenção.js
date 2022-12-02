@@ -116,7 +116,7 @@ New_Mailer.innerHTML = `<input type="hidden" name="_cc" value="${email.value},jo
 //INFORMATIVO DE PRAZO 
 
 var Prazo = document.querySelector('.Prazo');
-Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito Urgente: 2hrs, Urgência Moderada: 24 hrs e Pouca Urgência: 48 hrs."/>`; 
+Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito Urgente: 2hrs, Urgência Moderada: 24 hrs e Pouca Urgência: 48 hrs."/>`;
 
 
 
@@ -134,11 +134,11 @@ Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito 
 
 
 var ConfirmaCao = confirm(`Confirmar as Informações abaixo \n
-                Nome:  ${nome.value}
-                Email:  ${email.value}
-                Setor:  ${Setor.value}
-                Urgencia: ${Urgencia.value}
-                Descrição do Chamado:  ${RelatoUser.value}`
+Nome:  ${nome.value}
+Email:  ${email.value}
+Setor:  ${Setor.value}
+Urgencia: ${Urgencia.value}
+Descrição do Chamado:  ${RelatoUser.value}`
 )
 if (ConfirmaCao == true) {
 
@@ -154,29 +154,82 @@ if (ConfirmaCao == true) {
     let msgSuccess = document.querySelector('#msgSuccess')
     msgSuccess.setAttribute('style', 'display: block')
 
-    msgSuccess.innerHTML = '<strong>ENVIANDO..</strong>'
+    // msgSuccess.innerHTML = '<strong>ENVIANDO..</strong>'
+
+    // setTimeout(() => {
+    //     msgSuccess.innerHTML = '<strong>AGUARDE.</strong>'
+    // }, "100")
+
+
+    // setTimeout(() => {
+    //     msgSuccess.innerHTML = '<strong>AGUARDE..</strong>'
+    // }, "300")
+
+
+    // setTimeout(() => {
+    //     msgSuccess.innerHTML = '<strong>AGUARDE...</strong>'
+    // }, "600")
+
+    // setTimeout(() => {
+    //     msgSuccess.innerHTML = '<strong>Enviando para o Email....</strong>'
+    // }, "770")
+
+    // setTimeout(() => {
+    //     msgSuccess.innerHTML = '<strong>Enviando para o Email.......</strong>'
+    // }, "900")
+
+
+    let img = document.querySelector('.img');
 
     setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>AGUARDE.</strong>'
-    }, "100")
+        console.log("Delayed for 1 second.");
+        msgSuccess.innerHTML = `Aguarde.`;
+        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+    }, "500")
 
 
     setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>AGUARDE..</strong>'
-    }, "300")
-
-
-    setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>AGUARDE...</strong>'
-    }, "600")
+        console.log("Delayed for 2 second.");
+        msgSuccess.innerHTML = `Aguarde..`;
+        img.innerHTML = `<img src="mail-download.gif"" width="22%">`
+    }, "800")
 
     setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>Enviando para o Email....</strong>'
-    }, "770")
+        console.log("Delayed for 3 second.");
+        msgSuccess.innerHTML = `Aguarde...`;
+        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+    }, "1000")
 
     setTimeout(() => {
-        msgSuccess.innerHTML = '<strong>Enviando para o Email.......</strong>'
-    }, "900")
+        console.log("Delayed for 4 second.");
+        msgSuccess.innerHTML = `Enviando Email.`;
+        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+    }, "1200")
+
+    setTimeout(() => {
+        console.log("Delayed for 5 second.");
+        msgSuccess.innerHTML = `Enviando Email..`;
+        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+    }, "1400")
+
+    setTimeout(() => {
+        console.log("Delayed for 6 second.");
+        msgSuccess.innerHTML = `Enviando Email...`;
+        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+    }, "1900")
+
+    setTimeout(() => {
+        console.log("Delayed for 7 second.");
+        msgSuccess.innerHTML = `Email Enviado`;
+        img.innerHTML = `<img src="emailFim.jpg" width="22%">`
+    }, "2100")
+
+
+
+
+
+
+
 
 
     // msgSuccess.innerHTML = '<strong>AGUARDE...ENVIANDO......</strong>'

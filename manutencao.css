@@ -17,7 +17,11 @@
 }
 
 
-
+.mensagem{
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
 
 body {
     background: linear-gradient(45deg, #313131, #383838);
