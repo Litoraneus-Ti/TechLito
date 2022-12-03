@@ -83,19 +83,6 @@ nome.addEventListener('keyup', () => {
 })
 
 
-
-
-
-
-
-//         var ConfirmaCao = confirm(`Se as Informações Citadas estão corretas pressione Ok para direcionarmos o Chamado para o email cadastrado, se não cancele e modifique a opção desejada? \n
-// Nome:  ${nome.value}
-// Email:  ${email.value}
-// Setor:  ${Setor.value}
-// Urgencia :  ${nivel_Urgencia.value}
-// Descrição do Chamado:  ${RelatoUser.value}`)
-
-
 var textarea_2 = document.querySelector('#textarea_2');
 
 var Setor = document.getElementById('Setor');
@@ -146,9 +133,6 @@ if (ConfirmaCao == true) {
     let form = document.querySelector(".enviarForm-1");
     form.click();
 
-
-
-
     let Main = document.querySelector('.Main');
     Main.setAttribute('style', 'display:none');
     let msgSuccess = document.querySelector('#msgSuccess')
@@ -184,58 +168,55 @@ if (ConfirmaCao == true) {
     setTimeout(() => {
         console.log("Delayed for 1 second.");
         msgSuccess.innerHTML = `Aguarde.`;
-        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "500")
 
 
     setTimeout(() => {
         console.log("Delayed for 2 second.");
         msgSuccess.innerHTML = `Aguarde..`;
-        img.innerHTML = `<img src="mail-download.gif"" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "800")
 
     setTimeout(() => {
         console.log("Delayed for 3 second.");
         msgSuccess.innerHTML = `Aguarde...`;
-        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "1000")
 
     setTimeout(() => {
         console.log("Delayed for 4 second.");
         msgSuccess.innerHTML = `Enviando Email.`;
-        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "1200")
 
     setTimeout(() => {
         console.log("Delayed for 5 second.");
         msgSuccess.innerHTML = `Enviando Email..`;
-        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "1400")
 
     setTimeout(() => {
         console.log("Delayed for 6 second.");
         msgSuccess.innerHTML = `Enviando Email...`;
-        img.innerHTML = `<img src="mail-download.gif" width="22%">`
+        img.innerHTML = `<img src="mail-download.gif">`
     }, "1900")
 
     setTimeout(() => {
         console.log("Delayed for 7 second.");
-        msgSuccess.innerHTML = `Email Enviado`;
-        img.innerHTML = `<img src="emailFim.jpg" width="22%">`
+        msgSuccess.innerHTML = `Email Enviado.`;
+        img.innerHTML = `<img src="emailFim.jpg">`
     }, "2100")
 
-
-
-
+    setTimeout(() => {
+        window.location.href = "https://litoraneus-ti.github.io/TechLito/"
+    }, "2500")
 
 
 
 
 
     // msgSuccess.innerHTML = '<strong>AGUARDE...ENVIANDO......</strong>'
-    msgError = document.querySelector('#msgError')
-    msgError.setAttribute('style', 'display: none')
-    msgError.innerHTML = '';
 
 
 

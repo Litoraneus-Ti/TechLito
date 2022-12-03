@@ -7,20 +7,24 @@
 }
 
 
-#msgSuccess{
-    
+#msgSuccess {
     color: white;
-    font-size: 22px; 
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
 }
-.Prazo{
+
+.Prazo {
     display: none;
 }
 
+.img {
+    margin: auto;
+}
 
-.mensagem{
+.mensagem {
     text-align: center;
     margin: auto;
-    align-items: center;
 }
 
 body {
