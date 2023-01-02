@@ -97,13 +97,13 @@ var ele = document.getElementsByName('Urgência');
 // Inserção de email
 
 var New_Mailer = document.querySelector('.New_Mailer');
-New_Mailer.innerHTML = `<input type="hidden" name="_cc" value="${email.value},joelma.litoraneus@outlook.com" class="EmailCopia"></input>`
+New_Mailer.innerHTML = `<input type="hidden" name="_cc" value="${email.value}" class="EmailCopia"></input>`
 
 
 //INFORMATIVO DE PRAZO 
 
 var Prazo = document.querySelector('.Prazo');
-Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito Urgente: 2hrs, Urgência Moderada: 24 hrs e Pouca Urgência: 48 hrs."/>`;
+Prazo.innerHTML = `<input type="text" name="PRAZOS DE ATENDIMENTO" value="Muito Urgente: 2hrs, Urgência Moderada: 24 hrs e Pouca Urgência: 48 hrs."/>`
 
 
 
