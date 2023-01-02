@@ -138,29 +138,6 @@ if (ConfirmaCao == true) {
     let msgSuccess = document.querySelector('#msgSuccess')
     msgSuccess.setAttribute('style', 'display: block')
 
-    // msgSuccess.innerHTML = '<strong>ENVIANDO..</strong>'
-
-    // setTimeout(() => {
-    //     msgSuccess.innerHTML = '<strong>AGUARDE.</strong>'
-    // }, "100")
-
-
-    // setTimeout(() => {
-    //     msgSuccess.innerHTML = '<strong>AGUARDE..</strong>'
-    // }, "300")
-
-
-    // setTimeout(() => {
-    //     msgSuccess.innerHTML = '<strong>AGUARDE...</strong>'
-    // }, "600")
-
-    // setTimeout(() => {
-    //     msgSuccess.innerHTML = '<strong>Enviando para o Email....</strong>'
-    // }, "770")
-
-    // setTimeout(() => {
-    //     msgSuccess.innerHTML = '<strong>Enviando para o Email.......</strong>'
-    // }, "900")
 
 
     let img = document.querySelector('.img');
@@ -209,7 +186,7 @@ if (ConfirmaCao == true) {
     }, "2100")
 
     setTimeout(() => {
-        window.location.href = "https://litoraneus-ti.github.io/TechLito/"
+        window.location.href = "https://litoraneus-ti.github.io/TechLito/index.html"
     }, "2500")
 
 
